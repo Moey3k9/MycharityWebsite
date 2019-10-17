@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>About</title>
+  <meta charset="UTF-8">
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<style>
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container{
+    background-color: #f2f2f2;
+    position: absolute;
+    left: 50%;
+    top:40%;
+    height: 525px;
+    margin-top: -200px;
+    width: 400px;
+    margin-left: -200px;
+}
+</style>
+
+<body background="images/bg.jpg" style="overflow:hidden; background-size: cover; background-position: center;">
+
+  <nav class="nav">
+    <ul id="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About me</a></li>
+      <li><a href="More.html">About us</a></li>
+      <li><a href="Bibliography.html">Virtual Reality</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="History.html">History</a></li>
+      <li class="active"><a href="Donate.html">Donate</a></li>
+      <li><a href="Strategy.html">Strategy</a></li>
+      <li><a href="Facts.html">Facts</a></li>
+    </ul>
+  </nav>
+
+    <div class="container">
+      <form name='contact'>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="donation">Donation amount</label>
+        <input type="text" id="donation" name="donation" placeholder="Your donation amount..">
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;"></textarea>
+
+        <input type="submit" value="Submit" onclick="Validate()">
+      </form>
+    </div>
+  <script>
+  function Validate(){
+    var firstname = document.forms["contact"]["firstname"].value;
+    var lastname = document.forms["contact"]["lastname"].value;
+    var donation = document.forms["contact"]["donation"].value;
+    var subject = document.forms["contact"]["subject"].value;
+
+    if(firstname.length==0){
+      alert('Please enter first name');
+    }else if(lastname.length==0){
+      alert('Please enter last name');
+    }else if(subject.length==0){
+      alert('Please enter your message')
+    }else if(donation.length==0){
+      alert('Please enter your message')
+    }else{
+      alert('Your message has been recieved');
+    }
+
+    }
+  </script>
+
+</body>
+</html>
+
+</html>
+
+ 
